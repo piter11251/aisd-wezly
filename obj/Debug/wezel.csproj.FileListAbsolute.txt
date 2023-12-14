@@ -19,3 +19,13 @@ D:\programowanie\AiSD-warun\wezel\obj\Debug\wezel.pdb
 D:\programowanie\AiSD-warun\wezel\bin\Debug\wezel.exe.config
 D:\programowanie\AiSD-warun\wezel\bin\Debug\wezel.exe
 D:\programowanie\AiSD-warun\wezel\bin\Debug\wezel.pdb
+C:\Users\99pko\Documents\GitHub\aisd-wezly\bin\Debug\wezel.exe.config
+C:\Users\99pko\Documents\GitHub\aisd-wezly\bin\Debug\wezel.exe
+C:\Users\99pko\Documents\GitHub\aisd-wezly\bin\Debug\wezel.pdb
+C:\Users\99pko\Documents\GitHub\aisd-wezly\obj\Debug\wezel.csproj.AssemblyReference.cache
+C:\Users\99pko\Documents\GitHub\aisd-wezly\obj\Debug\wezel.Form1.resources
+C:\Users\99pko\Documents\GitHub\aisd-wezly\obj\Debug\wezel.Properties.Resources.resources
+C:\Users\99pko\Documents\GitHub\aisd-wezly\obj\Debug\wezel.csproj.GenerateResource.cache
+C:\Users\99pko\Documents\GitHub\aisd-wezly\obj\Debug\wezel.csproj.CoreCompileInputs.cache
+C:\Users\99pko\Documents\GitHub\aisd-wezly\obj\Debug\wezel.exe
+C:\Users\99pko\Documents\GitHub\aisd-wezly\obj\Debug\wezel.pdb

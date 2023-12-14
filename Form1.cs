@@ -378,7 +378,98 @@ namespace wezel
                 return null;
             return null;
         }
-        
+
+        public Wezel3 Usun(Wezel3 w)
+        {
+            if (w.leweDziecko == null && w.praweDziecko == null)
+            {
+                if (w == w.rodzic.praweDziecko)
+                {
+                    w.rodzic.praweDziecko = null;
+                }
+                else
+                {
+                    w.rodzic.leweDziecko = null;
+                }
+                w.rodzic = null;
+                return w;
+            }
+            else if (w.leweDziecko == null && w.praweDziecko != null)
+            {
+                if (w == w.rodzic.praweDziecko)
+                {
+                    w.praweDziecko.rodzic = w.rodzic;
+                    w.rodzic.praweDziecko = w.praweDziecko;
+
+                }
+                else
+                {
+                    w.praweDziecko.rodzic = w.rodzic;
+                    w.rodzic.leweDziecko = w.praweDziecko;
+                }
+                w.rodzic = null;
+                w.praweDziecko = null;
+                return w;
+
+            }
+            else if (w.leweDziecko != null && w.praweDziecko == null)
+            {
+                if (w == w.rodzic.praweDziecko)
+                {
+                    w.leweDziecko.rodzic = w.rodzic;
+                    w.rodzic.praweDziecko = w.leweDziecko;
+
+                }
+                else
+                {
+                    w.leweDziecko.rodzic = w.rodzic;
+                    w.rodzic.leweDziecko = w.leweDziecko;
+                }
+                w.rodzic = null;
+                w.leweDziecko = null;
+                return w;
+            }
+            else
+            {
+                var nastepnik = this.Nastepnik(w);
+                if (nastepnik.leweDziecko == null && nastepnik.praweDziecko == null)
+                {
+                    if (w == w.rodzic.leweDziecko)
+                    {
+                        w.rodzic.leweDziecko = nastepnik;
+                    }
+                    else
+                    {
+                        w.rodzic.praweDziecko = nastepnik;
+                    }
+                    nastepnik.rodzic = w.rodzic;
+                    nastepnik.leweDziecko = w.leweDziecko;
+                    nastepnik.praweDziecko = w.praweDziecko;
+                }
+                else if (nastepnik.leweDziecko == null && nastepnik.praweDziecko != null)
+                {
+                    nastepnik.praweDziecko.rodzic = nastepnik.rodzic;
+                    nastepnik.rodzic.leweDziecko = nastepnik.praweDziecko;
+
+                    nastepnik.rodzic = w.rodzic;
+                    if (w == w.rodzic.leweDziecko)
+                    {
+                        w.rodzic.leweDziecko = nastepnik;
+                    }
+                    else
+                    {
+                        w.rodzic.praweDziecko = nastepnik;
+                    }
+                    nastepnik.rodzic = w.rodzic;
+                    nastepnik.leweDziecko = w.leweDziecko;
+                    nastepnik.praweDziecko = w.praweDziecko;
+                }
+                w.rodzic = null;
+                w.leweDziecko = null;
+                w.praweDziecko = null;
+                return w;
+            }
+        }
     }
 
 }
